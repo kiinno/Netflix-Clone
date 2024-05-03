@@ -9,7 +9,7 @@ export default async function handler(
   if (req.method !== "GET") return res.status(405).end();
 
   try {
-    const { currentUser } = await serverAuth(req, res);
+    //const { currentUser } = await serverAuth(req, res);
     const { movieId } = req.query;
 
     if (!movieId || typeof movieId !== "string") throw new Error("Invalid ID");
